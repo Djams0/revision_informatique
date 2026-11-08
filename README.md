@@ -33,4 +33,4 @@ Le [programme semaine par semaine](00_ADMIN/PARCOURS_18_SEMAINES.md) précise la
 
 Les leçons, exemples et solutions ont été rédigés pour ce parcours. Les archives de cours ayant servi à l'audit ne sont pas redistribuées ici ; les ressources de tiers restent accessibles par leurs liens respectifs. Le dépôt est public pour la consultation ; aucune licence de réutilisation ou de redistribution supplémentaire n'est accordée par la seule mise en ligne.
 
-Le manifeste et les résultats dans `08_CONTROLES/` décrivent le paquet de formation initial. Cette page d'accueil a été ajoutée ensuite pour la publication sur GitHub.
+Les contrôles reproductibles sont dans [`tools/`](tools/), avec leurs résultats dans [`08_CONTROLES/`](08_CONTROLES/). Le manifeste exclut sa propre ligne pour éviter une taille auto-référente.

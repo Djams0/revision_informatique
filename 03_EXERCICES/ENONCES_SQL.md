@@ -2,6 +2,8 @@
 
 Travaille sur une copie dans `mes_exercices`. Les solutions sont dans `04_CORRIGES`, à ouvrir seulement après un essai. Les valeurs et identités sont fictives. Les niveaux 1/3, 2/3 et 3/3 sont des paliers, pas des notes. Pour chaque activité, prédis puis observe deux cas.
 
+Si tu n'as jamais exécuté de SQL, commence par [la fiche de pratique sans terminal SQL](../02_FICHES/PRATIQUER_SQL_PAS_A_PAS.md). Elle utilise seulement Thonny et Python 3 ; chaque requête tourne en mémoire dans une base fictive neuve.
+
 ## Q01 — Créer une table avec clé
 
 **Semaine :** 15 · **Difficulté :** 1/3 · **Prérequis :** M06 S15 · **Durée :** 20 min.

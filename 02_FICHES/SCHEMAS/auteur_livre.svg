@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="350" viewBox="0 0 880 350" role="img">
+<title>Relation Auteur / Livre</title><desc>Un auteur identifié par sa clé primaire peut être lié à plusieurs livres par auteur_id.</desc>
+<defs><marker id="p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#195980"/></marker></defs>
+<rect width="880" height="350" fill="#ffffff"/>
+<text x="32" y="42" font-family="Arial,sans-serif" font-size="23" font-weight="bold" fill="#17324b">Relation Auteur / Livre</text>
+<path d="M 375 175 L 505 175" fill="none" stroke="#195980" stroke-width="3" marker-end="url(#p)"/>
+<text x="440" y="163" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#17324b">1 vers plusieurs</text>
+<rect x="55" y="105" width="315" height="135" rx="12" fill="#eaf3f7" stroke="#195980" stroke-width="2"/>
+<text x="212" y="146" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#17324b">AUTEURS</text>
+<text x="212" y="172" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#17324b">id (clé primaire)</text>
+<text x="212" y="198" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#17324b">nom</text>
+<rect x="510" y="105" width="325" height="135" rx="12" fill="#eaf3f7" stroke="#195980" stroke-width="2"/>
+<text x="672" y="146" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#17324b">LIVRES</text>
+<text x="672" y="172" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#17324b">id ; titre</text>
+<text x="672" y="198" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#17324b">auteur_id (clé étrangère)</text>
+<text x="32" y="325" font-family="Arial,sans-serif" font-size="16" fill="#17324b">Chaque livre porte auteur_id, qui désigne un auteurs.id existant.</text></svg>

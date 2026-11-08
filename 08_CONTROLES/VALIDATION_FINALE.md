@@ -1,4 +1,6 @@
-# Validation finale — 8 novembre 2026
+# Validation finale — livraison initiale du 8 novembre 2026
+
+> Ce document décrit la livraison initiale. Pour les correctifs ultérieurs et leurs résultats reproduits, lire [RAPPORT_CORRECTIFS.md](../RAPPORT_CORRECTIFS.md) et [RESULTATS_TESTS.md](RESULTATS_TESTS.md). Le manifeste actuel est régénéré depuis les fichiers présents ; les comptes historiques ci-dessous peuvent différer.
 
 **Périmètre :** dossier `FORMATION_INFORMATIQUE_DEBUTANTE/` et archive du même nom suivie de `_18_SEMAINES.zip`. « Oui » signifie que le point demandé est établi par les fichiers ou par un contrôle indiqué ; les deux limites `NON_TESTE` sont détaillées dans `RESULTATS_TESTS.md`. Les ressources initiales sont des sources de réflexion seulement : aucun PDF, Word, ZIP ou script reçu n'a été redistribué.
 

@@ -1,11 +1,8 @@
 # Guide complet — informatique débutante, 18 semaines
 
-Ce document réunit les **neuf cours originaux** du parcours. Il est fourni en Markdown, format texte lisible hors ligne, afin de garder intact le contenu et les blocs de code sur tous les systèmes. Les neuf fichiers autonomes restent dans `01_COURS/`. Ouvre d'abord [INDEX.md](INDEX.md) pour le rythme hebdomadaire, les exercices, les corrigés et les projets. Tu peux lire ce guide dans un éditeur Markdown ou un éditeur de texte simple ; ne lance pas le code tant que la semaine 7 ne te l'a pas expliqué.
+Ce document réunit les **neuf cours originaux** du parcours dans l'ordre. Pour suivre les exercices et les projets, commence par [l'index](INDEX.md) et le [mode d'emploi](README_COMMENCER_ICI.md). Les fichiers autonomes sont dans `01_COURS/` ; ce guide est reconstruit depuis ces modules avec `python tools/construire_guide.py`.
 
-**Repères :** M00 = semaine 1 ; M01 = 2–3 ; M02 = 4–6 ; M03 = 7–11 ; M04 = 12 ; M05 = 13–14 ; M06 = 15 ; M07 = 16 ; M08 = 17–18. Prévoir 3–5 heures par semaine, avec une pause ou une répétition quand il le faut. Les liens vers `02_FICHES` sont relatifs à la racine de ce dossier.
-
----
-
+**Repères :** M00 = semaine 1 ; M01 = 2–3 ; M02 = 4–6 ; M03 = 7–11 ; M04 = 12 ; M05 = 13–14 ; M06 = 15 ; M07 = 16 ; M08 = 17–18. Prévoir 3–5 heures par semaine.
 
 ---
 
@@ -54,7 +51,6 @@ Sans rouvrir les consignes, retrouve `questions.txt` après fermeture de l'édit
 
 **Méthode de travail et IA :** note tes questions et ce que tu as essayé. Une IA peut donner un indice ou expliquer un message d'erreur, mais elle peut inventer : vérifie par une manipulation. Ne lui donne aucune donnée privée. Fiche dédiée : `02_FICHES/UTILISER_IA_POUR_APPRENDRE.md`.
 
-
 ---
 
 # M01 — Semaines 2–3 · Ordinateur, réseau et sécurité
@@ -70,6 +66,10 @@ Comprendre la différence entre mémoire et stockage aide à enregistrer ses fic
 ### Ce qu'il faut savoir
 
 Le **processeur** (CPU) exécute les instructions. La RAM garde temporairement les données utiles aux logiciels ouverts ; son contenu courant se perd à l'arrêt. Le SSD conserve les fichiers enregistrés. Un **périphérique** permet une entrée (clavier), une sortie (écran) ou les deux. Le système d'exploitation gère ces ressources et les logiciels. Les données numériques sont représentées au niveau matériel par des **bits**, unités prenant deux états, souvent notés 0 et 1 ; huit bits forment un octet. Il n'est pas nécessaire de calculer en binaire pour utiliser Python.
+
+![Schéma : CPU exécute, RAM travaille temporairement, SSD conserve le fichier enregistré](02_FICHES/SCHEMAS/cpu_ram_stockage.svg)
+
+**Lecture du schéma :** le CPU traite le travail en RAM ; l'enregistrement conserve une copie sur le stockage. Une phrase encore non enregistrée peut se perdre.
 
 ### Exemple expliqué pas à pas
 
@@ -121,6 +121,10 @@ flowchart LR
 
 Le DNS aide à trouver la destination avant l'échange ; il n'est pas un moteur de recherche.
 
+![Schéma : navigateur, DNS et serveur Web](02_FICHES/SCHEMAS/navigateur_dns_serveur.svg)
+
+**Lecture du schéma :** le navigateur demande une adresse au DNS, contacte le serveur par HTTPS et reçoit la page. Le DNS ne contient pas la page.
+
 ### Essaye toi-même
 
 Dessine le trajet d'une requête et écris sous chaque élément son rôle. Sur une **fausse** alerte que tu inventes, souligne trois signes qui te feraient vérifier par un autre moyen. Prévois où tu garderais une copie de `journal.txt`.
@@ -134,7 +138,6 @@ Dessine le trajet d'une requête et écris sous chaque élément son rôle. Sur 
 ### Comment vérifier si j'ai compris ?
 
 Explique à une autre personne « Wi-Fi », « Internet » et « Web » sans les employer comme synonymes. Sur ton dessin, identifie le client et le serveur. Décris ce que tu ferais devant un lien de connexion pressant.
-
 
 ---
 
@@ -191,6 +194,10 @@ Une **variable** porte un nom et une valeur qui peut changer. Elle permet de ret
 
 `total ← 0` affecte zéro à `total`. `total ← total + prix` lit l'ancienne valeur, additionne le prix, puis remplace la valeur. Ce n'est pas une égalité mathématique. Les opérateurs `+`, `-`, `*` calculent ; `>`, `<`, `=` comparent ; `ET`, `OU`, `NON` combinent des conditions. Une condition composée doit être vérifiée avec des cas limites : « âge entre 18 et 25 inclus » s'écrit `age >= 18 ET age <= 25`. Un **organigramme** représente le flux avec un début, des actions et une question à deux branches.
 
+![Schéma : total vaut zéro puis reçoit son ancienne valeur plus cinq](02_FICHES/SCHEMAS/variable_affectation.svg)
+
+**Lecture :** avec `total ← total + 5`, la nouvelle valeur remplace l'ancienne ; `←` n'est pas un test d'égalité.
+
 ### Exemple expliqué pas à pas
 
 ```text
@@ -214,6 +221,10 @@ Trace manuelle pour `prix=22` :
 | Condition vraie | 22 | 22 | Remise possible |
 
 Changer `prix` en 19 change la branche. On teste aussi 20, la frontière.
+
+![Schéma : si total est au moins vingt, afficher remise possible, sinon prix normal](02_FICHES/SCHEMAS/si_sinon.svg)
+
+**Lecture :** pour `total=20`, on suit « oui » ; pour `total=19`, « non ». Une seule phrase est affichée.
 
 ### Essaye toi-même
 
@@ -256,6 +267,10 @@ AFFICHER total
 | 2 | 1 | 15 | 27 |
 | 3 | 2 | 9 | 36 |
 
+![Schéma : total zéro, puis douze, vingt-sept et trente-six à travers trois tours](02_FICHES/SCHEMAS/boucle_trace.svg)
+
+**Lecture :** chaque tour ajoute une valeur au total. Après le troisième tour, `total=36` et la boucle se termine.
+
 Pour contrôler une saisie : `LIRE age` puis `TANT QUE age < 0 FAIRE LIRE age FIN TANT QUE`. Si la nouvelle saisie n'est jamais lue, la boucle peut ne jamais finir. Un test simple consiste à prévoir les sorties avec liste vide, un élément et trois éléments ; une liste vide exige un parcours qui ne commence pas.
 
 ### Essaye toi-même
@@ -271,7 +286,6 @@ Trace une liste `[4, 7]` et calcule sa somme. Écris une boucle qui redemande un
 ### Comment vérifier si j'ai compris ?
 
 Explique le résultat 36 sans exécuter le programme. Quel est le dernier indice de cinq éléments ? Pourquoi la saisie doit-elle être relue dans `TANT QUE` ?
-
 
 ---
 
@@ -479,6 +493,8 @@ La fonction reçoit `[12, 15, 9]`, calcule `36 / 3` et retourne `12.0`. L'appel 
 
 Crée `calculateur.py` avec une fonction `double(nombre)` qui retourne deux fois son argument ; appelle-la avec 0, 3 et -2. Puis adapte le programme de moyenne pour afficher aussi le nombre de notes. Option : vérifie une note hors intervalle 0–20 avant de l'ajouter.
 
+**Livrable de S11 :** commence [P1, la mini-calculatrice](06_PROJETS/P1_CALCULATRICE/ENONCE.md) avec trois opérations et des tests d'entrée invalide. Le programme de moyenne de cette page est une **variante facultative**, utile pour revoir les fonctions ; il ne remplace pas P1.
+
 ### 3 choses à retenir
 
 1. Une fonction reçoit des paramètres et peut retourner une valeur.
@@ -488,7 +504,6 @@ Crée `calculateur.py` avec une fonction `double(nombre)` qui retourne deux fois
 ### Comment vérifier si j'ai compris ?
 
 Sans lancer, calcule `moyenne([10, 20])` et `moyenne([])`. Explique pourquoi `print(moyenne([10, 20]))` affiche une valeur alors que la fonction elle-même ne contient pas `print`. Note tes résultats dans `SUIVI_18_SEMAINES.csv`.
-
 
 ---
 
@@ -549,6 +564,8 @@ Le programme n'attrape pas toutes les erreurs indistinctement : une faute de cod
 
 Crée une copie de `carnet.py`. Change les deux dépenses fictives et prévois le total avant l'exécution. Exécute pas à pas et note `total` à chaque tour. Pour observer une valeur CSV invalide, remplace **dans la liste `depenses` du programme copié** le montant `3` par le texte `"abc"`, puis relance : le programme écrira `abc` et la lecture lèvera `ValueError` à `int(ligne["euros"])`. Corrige la valeur dans la copie du programme et relance. Modifier seulement le CSV avant de relancer ne fonctionnerait pas : le mode `w` l'écraserait d'abord.
 
+**Livrable de S12 :** termine les exercices [P22–P25](03_EXERCICES/ENONCES_PYTHON.md), puis commence [P3, la liste de tâches locale](06_PROJETS/P3_TACHES_LOCALES/ENONCE.md). Le carnet de dépenses de cette page reste une **variante facultative** pour pratiquer le CSV ; il ne remplace pas P3.
+
 ## 3 choses à retenir
 
 1. Reproduire une erreur et suivre les variables permet de trouver sa cause.
@@ -558,7 +575,6 @@ Crée une copie de `carnet.py`. Change les deux dépenses fictives et prévois l
 ## Comment vérifier si j'ai compris ?
 
 Après fermeture de Thonny, retrouve `depenses.csv` et prédis son contenu. Explique pourquoi `int(ligne["euros"])` est nécessaire et ce qui arrivera si le fichier ne contient pas l'en-tête attendu. Décris une sauvegarde simple de ton dossier `S12`.
-
 
 ---
 
@@ -670,16 +686,21 @@ Ajoute `class="important"` au paragraphe d'introduction et `.important { font-we
 
 Sans toucher au HTML, change la couleur d'un titre et vérifie le résultat. Explique pourquoi le fichier HTML continue d'afficher du texte si CSS est absent. JavaScript n'est pas nécessaire pour ce résultat.
 
-
 ---
 
 # M06 — Semaine 15 · Découvrir les bases de données avec SQLite
 
 Prérequis : listes et fichiers (M03–M04). Temps : 3–5 h. Le but est de comprendre une petite table et quelques requêtes, sans serveur ni données réelles.
 
+Pour les cinq exercices Q01–Q05, suis la [fiche SQL pas à pas](02_FICHES/PRATIQUER_SQL_PAS_A_PAS.md) : elle explique les clics dans Thonny, les fichiers à créer et les résultats attendus.
+
 ## À quoi cela sert ?
 
 Une liste et un CSV suffisent pour un carnet minuscule. Pour retrouver et modifier facilement des lignes selon des critères, une **base de données** devient utile. Une **table** ressemble à un tableau : chaque **ligne** représente un enregistrement, chaque **colonne** une propriété. Une **clé primaire** donne à chaque ligne un identifiant distinct ; une **relation** peut relier l'identifiant d'une ligne à une autre table, par exemple un livre à son auteur. Cette semaine, une table suffit.
+
+![Schéma : auteurs.id est relié à livres.auteur_id, un auteur pouvant avoir plusieurs livres](02_FICHES/SCHEMAS/auteur_livre.svg)
+
+**Lecture :** un livre possède un `auteur_id` qui désigne un `auteurs.id`. Le cas à deux tables est expliqué dans la [fiche Auteur/Livre](02_FICHES/AUTEUR_LIVRE.md) et Q05 ; la première partie du cours utilise une seule table.
 
 ## Ce qu'il faut savoir
 
@@ -739,7 +760,6 @@ Sur une **copie** du script, ajoute un quatrième livre fictif avec un nouvel id
 
 Explique pourquoi le livre de 2018 n'est pas affiché, mais reste stocké. Quel résultat obtiendrait `WHERE annee >= 2023` ? Distingue SQL, SQLite et phpMyAdmin en une phrase chacun.
 
-
 ---
 
 # M07 — Semaine 16 · Terminal, Git et usage responsable de l'IA
@@ -792,7 +812,6 @@ Crée un deuxième dossier d'essai dans le gestionnaire, retrouve-le avec le ter
 Montre deux lignes dans `git log --oneline` et explique la différence entre un fichier modifié et un commit. Reproduis la navigation au dossier parent sans copier une commande de suppression. Si Git est indisponible sur ton appareil, explique les étapes avec un schéma et poursuis le projet local ; installe Git plus tard depuis sa source officielle.
 
 **IA comme tuteur :** demande « donne un indice, pas le code complet » ; exécute toi-même une solution et compare à la documentation. Voir `02_FICHES/UTILISER_IA_POUR_APPRENDRE.md`.
-
 
 ---
 
