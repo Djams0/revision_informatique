@@ -1,0 +1,19 @@
+﻿Semaine;Module;Objectif et notion;Activité / livrable;Durée prévue;Cours lu [ ];Exemple reproduit [ ];Mini-défi tenté [ ];Contrôle réussi [ ];Durée réelle (h);Résultat / preuve;Blocage ou question;Prochain pas
+1;M00;"Ordinateur, écran, clavier/souris, logiciel, navigateur, fichiers/extensions et dossiers ; enregistrer, retrouver, installation sûre et méthode de travail.";Dossier `mes_exercices` avec un fichier texte et une copie.;3–5 h;☐;☐;☐;☐;;;;
+2;M01;"Matériel (CPU, RAM, stockage, périphériques), système d'exploitation et mises à jour ; analogies avec limites.";Dessin légendé d'un PC et tableau « temporaire/permanent ».;3–5 h;☐;☐;☐;☐;;;;
+3;M01;"Réseau local, Wi-Fi, routeur, Internet/Web, navigateur/serveur, DNS et HTTPS ; sauvegarde, mots de passe, MFA et hameçonnage.";Schéma d'une visite Web et checklist de sécurité fictive.;3–5 h;☐;☐;☐;☐;;;;
+4;M02;"Problème, entrée, traitement, sortie ; algorithme, pseudo-code lisible, cas limites et tracé à la main.";Calcul de monnaie en pseudo-code, trois traces.;3–5 h;☐;☐;☐;☐;;;;
+5;M02;"Variables, types, affectation, comparaisons, conditions `SI/SINON` ; organigramme et trace.";Pseudo-code et organigramme d'une remise conditionnelle.;3–5 h;☐;☐;☐;☐;;;;
+6;M02;"Boucles `POUR` et `TANT QUE`, compteur, condition d'arrêt ; liste simple en pseudo-code.";Somme d'une liste et contrôle de saisie, avec traces.;3–5 h;☐;☐;☐;☐;;;;
+7;M03;"Installation guidée Thonny/Python 3, sauvegarde `.py`, exécution ; `print`, `input`, nombres et chaînes.";`bonjour.py`, `prix.py` exécutés localement.;3–5 h;☐;☐;☐;☐;;;;
+8;M03;"Types/conversions, conditions Python, indentation, comparaisons et booléens ; traduire S4–S5.";`monnaie.py` et `age.py`.;3–5 h;☐;☐;☐;☐;;;;
+9;M03;"Boucles Python `for`, `range`, `while`, saisie contrôlée ; traduire S6.";`table.py` et `note.py`.;3–5 h;☐;☐;☐;☐;;;;
+10;M03;Listes, chaînes, dictionnaires élémentaires et parcours.;Petit catalogue de livres fictifs en mémoire.;3–5 h;☐;☐;☐;☐;;;;
+11;M03;"Fonctions simples, paramètres/retour, portée locale intuitive ; tests normaux et limites.";Mini-projet 1 : moyenne de notes fictives, entrées testées.;3–5 h;☐;☐;☐;☐;;;;
+12;M04;"Fichiers texte et CSV simples, chemins relatifs, `with open`, encodage UTF-8, `try/except ValueError` ciblé ; débogage.";Mini-projet 2 : carnet local de dépenses fictives et fichier de test.;3–5 h;☐;☐;☐;☐;;;;
+13;M05;"Page Web locale : HTML, balises sémantiques, titres, listes, liens, images avec `alt` ; éditeur simple.";`index.html` sur un sujet inventé.;3–5 h;☐;☐;☐;☐;;;;
+14;M05;"CSS séparé, sélecteurs élémentaires, couleurs, espacements, lisibilité, mise en page simple ; inspection navigateur.";`style.css` et page locale améliorée.;3–5 h;☐;☐;☐;☐;;;;
+15;M06;"Données tabulaires, table/ligne/colonne, clé primaire, relation intuitive ; SQLite local : `CREATE`, `INSERT`, `SELECT`, `WHERE`, `ORDER BY`, `UPDATE`.";Mini-base de livres fictifs et requêtes documentées.;3–5 h;☐;☐;☐;☐;;;;
+16;M07;"Terminal sans danger : dossier courant, `pwd`/`cd`/liste, chemins ; Git local `init/status/add/commit`, puis GitHub en option.";Dossier de projet versionné localement, 2 commits.;3–5 h;☐;☐;☐;☐;;;;
+17;M08;"Projet final, cadrage : choisir carnet, quiz ou gestion de livres ; spécifier entrées/sorties, pseudo-code, tests, fichiers et README.";Plan d'une page, prototype Python local et 5 cas de test.;3–5 h;☐;☐;☐;☐;;;;
+18;M08;Finalisation, correction, présentation, autonomie : lire une documentation, chercher une erreur, découper une amélioration.;Projet Python fonctionnel, données fictives, README, journal de progrès.;3–5 h;☐;☐;☐;☐;;;;

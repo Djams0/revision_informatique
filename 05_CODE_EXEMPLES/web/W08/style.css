@@ -1,0 +1,4 @@
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; color: #222; background: #f7f7f7; line-height: 1.6; }
+main { max-width: 42rem; margin: 2rem auto; padding: 1rem; background: white; }
+h1 { color: #184b73; }

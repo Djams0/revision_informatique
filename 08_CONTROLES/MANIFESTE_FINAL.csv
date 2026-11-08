@@ -1,0 +1,113 @@
+fichier,role,taille_octets,etat
+00_ADMIN/AUDIT_ERREURS.md,audit et parcours,8486,VALIDE
+00_ADMIN/INVENTAIRE_SOURCES.csv,audit et parcours,131954,VALIDE
+00_ADMIN/PARCOURS_18_SEMAINES.md,audit et parcours,6777,VALIDE
+00_ADMIN/PLAN_DE_PRODUCTION.md,audit et parcours,4701,VALIDE
+00_ADMIN/RESSOURCES_A_VERIFIER.md,audit et parcours,5826,VALIDE
+00_ADMIN/SELECTION_SOURCES.md,audit et parcours,9820,VALIDE
+01_COURS/M00.md,cours hebdomadaire,3859,VALIDE
+01_COURS/M01.md,cours hebdomadaire,5964,VALIDE
+01_COURS/M02.md,cours hebdomadaire,6758,VALIDE
+01_COURS/M03.md,cours hebdomadaire,12138,VALIDE
+01_COURS/M04.md,cours hebdomadaire,4472,VALIDE
+01_COURS/M05.md,cours hebdomadaire,5632,VALIDE
+01_COURS/M06.md,cours hebdomadaire,4541,VALIDE
+01_COURS/M07.md,cours hebdomadaire,4468,VALIDE
+01_COURS/M08.md,cours hebdomadaire,6777,VALIDE
+02_FICHES/INSTALLATION_ET_DEPANNAGE.md,aide et mémento,4559,VALIDE
+02_FICHES/LEXIQUE_FR_EN.md,aide et mémento,6637,VALIDE
+02_FICHES/MEMENTO_PSEUDOCODE_PYTHON.md,aide et mémento,3200,VALIDE
+02_FICHES/MEMENTO_SYSTEME_WEB.md,aide et mémento,2429,VALIDE
+02_FICHES/UTILISER_IA_POUR_APPRENDRE.md,aide et mémento,2702,VALIDE
+03_EXERCICES/ATELIERS_SYSTEME_RESEAU_GIT.md,énoncés et bilans,3667,VALIDE
+03_EXERCICES/ENONCES_ALGORITHMIQUE.md,énoncés et bilans,8644,VALIDE
+03_EXERCICES/ENONCES_PYTHON.md,énoncés et bilans,13155,VALIDE
+03_EXERCICES/ENONCES_SQL.md,énoncés et bilans,3226,VALIDE
+03_EXERCICES/ENONCES_WEB.md,énoncés et bilans,5298,VALIDE
+03_EXERCICES/QUIZ_ET_BILANS.md,énoncés et bilans,2839,VALIDE
+04_CORRIGES/CORRIGES_ALGORITHMIQUE.md,corrigés séparés,9008,VALIDE
+04_CORRIGES/CORRIGES_ATELIERS.md,corrigés séparés,4251,VALIDE
+04_CORRIGES/CORRIGES_PYTHON.md,corrigés séparés,15403,VALIDE
+04_CORRIGES/CORRIGES_QUIZ.md,corrigés séparés,3120,VALIDE
+04_CORRIGES/CORRIGES_SQL.md,corrigés séparés,4161,VALIDE
+04_CORRIGES/CORRIGES_WEB.md,corrigés séparés,6724,VALIDE
+05_CODE_EXEMPLES/README.md,exemple exécutable,704,VALIDE
+05_CODE_EXEMPLES/python/A11/solution.py,exemple exécutable,61,VALIDE
+05_CODE_EXEMPLES/python/A12/solution.py,exemple exécutable,144,VALIDE
+05_CODE_EXEMPLES/python/A13/solution.py,exemple exécutable,108,VALIDE
+05_CODE_EXEMPLES/python/A14/solution.py,exemple exécutable,87,VALIDE
+05_CODE_EXEMPLES/python/A15/solution.py,exemple exécutable,148,VALIDE
+05_CODE_EXEMPLES/python/P01/solution.py,exemple exécutable,46,VALIDE
+05_CODE_EXEMPLES/python/P02/solution.py,exemple exécutable,64,VALIDE
+05_CODE_EXEMPLES/python/P03/solution.py,exemple exécutable,84,VALIDE
+05_CODE_EXEMPLES/python/P04/solution.py,exemple exécutable,97,VALIDE
+05_CODE_EXEMPLES/python/P05/solution.py,exemple exécutable,44,VALIDE
+05_CODE_EXEMPLES/python/P06/solution.py,exemple exécutable,97,VALIDE
+05_CODE_EXEMPLES/python/P07/solution.py,exemple exécutable,136,VALIDE
+05_CODE_EXEMPLES/python/P08/solution.py,exemple exécutable,130,VALIDE
+05_CODE_EXEMPLES/python/P09/solution.py,exemple exécutable,86,VALIDE
+05_CODE_EXEMPLES/python/P10/solution.py,exemple exécutable,108,VALIDE
+05_CODE_EXEMPLES/python/P11/solution.py,exemple exécutable,115,VALIDE
+05_CODE_EXEMPLES/python/P12/solution.py,exemple exécutable,234,VALIDE
+05_CODE_EXEMPLES/python/P13/solution.py,exemple exécutable,120,VALIDE
+05_CODE_EXEMPLES/python/P14/solution.py,exemple exécutable,130,VALIDE
+05_CODE_EXEMPLES/python/P15/solution.py,exemple exécutable,65,VALIDE
+05_CODE_EXEMPLES/python/P16/solution.py,exemple exécutable,227,VALIDE
+05_CODE_EXEMPLES/python/P17/solution.py,exemple exécutable,93,VALIDE
+05_CODE_EXEMPLES/python/P18/solution.py,exemple exécutable,98,VALIDE
+05_CODE_EXEMPLES/python/P19/solution.py,exemple exécutable,132,VALIDE
+05_CODE_EXEMPLES/python/P20/solution.py,exemple exécutable,217,VALIDE
+05_CODE_EXEMPLES/python/P21/solution.py,exemple exécutable,202,VALIDE
+05_CODE_EXEMPLES/python/P22/message.txt,exemple exécutable,4,VALIDE
+05_CODE_EXEMPLES/python/P22/solution.py,exemple exécutable,180,VALIDE
+05_CODE_EXEMPLES/python/P23/solution.py,exemple exécutable,270,VALIDE
+05_CODE_EXEMPLES/python/P24/solution.py,exemple exécutable,464,VALIDE
+05_CODE_EXEMPLES/python/P25/solution.py,exemple exécutable,187,VALIDE
+05_CODE_EXEMPLES/sql/Q01.sql,exemple exécutable,198,VALIDE
+05_CODE_EXEMPLES/sql/Q02.sql,exemple exécutable,190,VALIDE
+05_CODE_EXEMPLES/sql/Q03.sql,exemple exécutable,238,VALIDE
+05_CODE_EXEMPLES/sql/Q04.sql,exemple exécutable,243,VALIDE
+05_CODE_EXEMPLES/sql/Q05.sql,exemple exécutable,433,VALIDE
+05_CODE_EXEMPLES/web/W01/index.html,exemple exécutable,135,VALIDE_STRUCTURE_RENDU_NON_TESTE
+05_CODE_EXEMPLES/web/W02/index.html,exemple exécutable,217,VALIDE_STRUCTURE_RENDU_NON_TESTE
+05_CODE_EXEMPLES/web/W03/index.html,exemple exécutable,190,VALIDE_STRUCTURE_RENDU_NON_TESTE
+05_CODE_EXEMPLES/web/W04/index.html,exemple exécutable,256,VALIDE_STRUCTURE_RENDU_NON_TESTE
+05_CODE_EXEMPLES/web/W05/badge.svg,exemple exécutable,203,VALIDE_STRUCTURE_RENDU_NON_TESTE
+05_CODE_EXEMPLES/web/W05/index.html,exemple exécutable,226,VALIDE_STRUCTURE_RENDU_NON_TESTE
+05_CODE_EXEMPLES/web/W06/index.html,exemple exécutable,319,VALIDE_STRUCTURE_RENDU_NON_TESTE
+05_CODE_EXEMPLES/web/W07/index.html,exemple exécutable,201,VALIDE_STRUCTURE_RENDU_NON_TESTE
+05_CODE_EXEMPLES/web/W07/style.css,exemple exécutable,50,VALIDE_STRUCTURE_RENDU_NON_TESTE
+05_CODE_EXEMPLES/web/W08/index.html,exemple exécutable,310,VALIDE_STRUCTURE_RENDU_NON_TESTE
+05_CODE_EXEMPLES/web/W08/style.css,exemple exécutable,226,VALIDE_STRUCTURE_RENDU_NON_TESTE
+06_PROJETS/IDEES_POUR_LA_SUITE.md,projet guidé et solution,1301,VALIDE
+06_PROJETS/P1_CALCULATRICE/CRITERES.md,projet guidé et solution,569,VALIDE
+06_PROJETS/P1_CALCULATRICE/ENONCE.md,projet guidé et solution,1035,VALIDE
+06_PROJETS/P1_CALCULATRICE/INDICES.md,projet guidé et solution,290,VALIDE
+06_PROJETS/P1_CALCULATRICE/SOLUTION/README.md,projet guidé et solution,530,VALIDE
+06_PROJETS/P1_CALCULATRICE/SOLUTION/calculatrice.py,projet guidé et solution,532,VALIDE
+06_PROJETS/P2_QUIZ/CRITERES.md,projet guidé et solution,540,VALIDE
+06_PROJETS/P2_QUIZ/ENONCE.md,projet guidé et solution,954,VALIDE
+06_PROJETS/P2_QUIZ/INDICES.md,projet guidé et solution,328,VALIDE
+06_PROJETS/P2_QUIZ/SOLUTION/README.md,projet guidé et solution,529,VALIDE
+06_PROJETS/P2_QUIZ/SOLUTION/quiz.py,projet guidé et solution,553,VALIDE
+06_PROJETS/P3_TACHES_LOCALES/CRITERES.md,projet guidé et solution,648,VALIDE
+06_PROJETS/P3_TACHES_LOCALES/ENONCE.md,projet guidé et solution,1111,VALIDE
+06_PROJETS/P3_TACHES_LOCALES/INDICES.md,projet guidé et solution,323,VALIDE
+06_PROJETS/P3_TACHES_LOCALES/SOLUTION/README.md,projet guidé et solution,636,VALIDE
+06_PROJETS/P3_TACHES_LOCALES/SOLUTION/taches.py,projet guidé et solution,872,VALIDE
+06_PROJETS/P4_PORTFOLIO_LOCAL/CRITERES.md,projet guidé et solution,686,VALIDE
+06_PROJETS/P4_PORTFOLIO_LOCAL/ENONCE.md,projet guidé et solution,1070,VALIDE
+06_PROJETS/P4_PORTFOLIO_LOCAL/INDICES.md,projet guidé et solution,295,VALIDE
+06_PROJETS/P4_PORTFOLIO_LOCAL/SOLUTION/README.md,projet guidé et solution,640,VALIDE
+06_PROJETS/P4_PORTFOLIO_LOCAL/SOLUTION/index.html,projet guidé et solution,826,VALIDE_STRUCTURE_RENDU_NON_TESTE
+06_PROJETS/P4_PORTFOLIO_LOCAL/SOLUTION/style.css,projet guidé et solution,329,VALIDE_STRUCTURE_RENDU_NON_TESTE
+07_RESSOURCES/METHODE_AUTOFORMATION_IA.md,ressource externe commentée,3681,VALIDE
+07_RESSOURCES/SITES_ET_VIDEOS_VERIFIES.md,ressource externe commentée,7466,VALIDE
+08_CONTROLES/MANIFESTE_FINAL.csv,audit final,7824,VALIDE
+08_CONTROLES/RESULTATS_TESTS.md,audit final,5431,VALIDE
+08_CONTROLES/VALIDATION_FINALE.md,audit final,4492,VALIDE
+GUIDE_COMPLET.md,guide et suivi,55545,VALIDE
+INDEX.md,guide et suivi,4774,VALIDE
+NOTE_POUR_L_ACCOMPAGNANT.md,guide et suivi,2276,VALIDE
+README_COMMENCER_ICI.md,guide et suivi,4077,VALIDE
+SUIVI_18_SEMAINES.csv,guide et suivi,3854,VALIDE

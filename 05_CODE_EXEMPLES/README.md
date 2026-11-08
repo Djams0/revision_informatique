@@ -1,0 +1,3 @@
+# Exemples et solutions
+
+Ces fichiers sont des **corrigés** : lire les énoncés avant d’ouvrir ce dossier. Chaque dossier `python/Axx` ou `python/Pxx` contient un `solution.py` autonome ; `P22` inclut `message.txt`. Lance une copie avec Thonny. `P23` ajoute à `taches.txt`; `P24` remplace `depenses.csv` dans son dossier, donc utilise uniquement une copie d’exercice. Chaque dossier `web/Wxx` s’ouvre par `index.html` hors ligne ; `W05` contient l’illustration SVG créée pour l’exercice. Chaque `sql/Qxx.sql` initialise ses propres tables dans une base SQLite d’essai vide ; ne l’exécute pas sur une base personnelle. Les fichiers sont des exemples originaux, avec données fictives.
