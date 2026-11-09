@@ -1,5 +1,7 @@
 # Index — formation informatique débutante, 18 semaines
 
+**Si tu pars de zéro :** [Démarrage guidé](00_DEMARRER/README.md) · [Préparer le PC](00_DEMARRER/INSTALLATIONS.md) · [Vidéos par semaine](00_DEMARRER/VIDEOS_PAR_SEMAINE.md) · [7 ateliers dirigés](09_ATELIERS_GUIDES/README.md).
+
 **Pour commencer :** [mode d'emploi](README_COMMENCER_ICI.md) · [guide complet](GUIDE_COMPLET.md) · [calendrier détaillé](00_ADMIN/PARCOURS_18_SEMAINES.md) · [suivi à remplir](SUIVI_18_SEMAINES.csv).
 
 Travaille 3–5 h par semaine, à ton rythme. Le dossier est utilisable hors ligne après l'installation de Thonny ; les liens externes sont des compléments. Crée `mes_exercices` à côté de ce dossier pour tes propres essais. Lis un cours, reproduis son exemple, choisis 1–2 exercices de la semaine, puis compare avec le corrigé séparé. Une semaine avec beaucoup d'activités propose des choix : il n'est pas nécessaire de tout finir avant de continuer si les contrôles essentiels sont compris.
@@ -26,6 +28,10 @@ Le schéma résume l'ordre ; le tableau ci-dessous indique quoi ouvrir. Les ment
 | 15 | [M06 — données et SQLite](01_COURS/M06.md) | Q01–Q05 dans [SQL](03_EXERCICES/ENONCES_SQL.md), avec [la fiche pas à pas](02_FICHES/PRATIQUER_SQL_PAS_A_PAS.md) | Interroger une base fictive en mémoire. |
 | 16 | [M07 — terminal et Git](01_COURS/M07.md) | T04–T05 dans les [ateliers](03_EXERCICES/ATELIERS_SYSTEME_RESEAU_GIT.md) | Deux versions d'un README local. |
 | 17–18 | [M08 — projet autonome](01_COURS/M08.md) | Refaire les exercices utiles au projet choisi | [P2](06_PROJETS/P2_QUIZ/ENONCE.md) ou [P3](06_PROJETS/P3_TACHES_LOCALES/ENONCE.md), puis [Quiz J18](03_EXERCICES/QUIZ_ET_BILANS.md). |
+
+## Ateliers supplémentaires à compléter dans un fichier
+
+Les [7 ateliers guidés](09_ATELIERS_GUIDES/README.md) t'apprennent à remplir des fichiers .txt de pseudo-code, puis des programmes .py, à traduire dans les deux sens et à lire des corrections détaillées. Ils ne remplacent pas les 58 exercices. Si nécessaire, regarde [une vidéo pertinente](00_DEMARRER/VIDEOS_PAR_SEMAINE.md) puis reviens à la pratique.
 
 ## Aides et solutions à ouvrir après un essai
 

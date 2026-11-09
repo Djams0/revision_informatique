@@ -6,6 +6,9 @@ Une formation autonome pour une personne adulte qui part de zéro. Elle commence
 
 ## Par où commencer ?
 
+**Nouveau :** suis [le parcours de démarrage guidé](00_DEMARRER/README.md), puis [les installations minimales](00_DEMARRER/INSTALLATIONS.md), [les vidéos par semaine](00_DEMARRER/VIDEOS_PAR_SEMAINE.md) et [7 ateliers de pseudo-code et Python à compléter](09_ATELIERS_GUIDES/README.md). Ces ateliers sont **facultatifs** et ne remplacent pas les 58 exercices du tronc commun.
+
+
 1. Ouvre le [mode d'emploi](README_COMMENCER_ICI.md). Il explique comment organiser tes fichiers, choisir tes exercices et travailler même si tu n'as jamais programmé.
 2. Consulte l'[index des 18 semaines](INDEX.md), puis lis [M00 — premiers pas avec l'ordinateur](01_COURS/M00.md).
 3. Chaque semaine, reproduis les exemples, essaie les [exercices](03_EXERCICES/) et remplis le [tableau de suivi](SUIVI_18_SEMAINES.csv). Ouvre les [corrigés](04_CORRIGES/) **après** ton essai.
@@ -17,6 +20,8 @@ Tu peux lire directement les fichiers Markdown (`.md`) sur GitHub. Pour les util
 
 | Emplacement | Contenu |
 |---|---|
+| [`00_DEMARRER/`](00_DEMARRER/) | Premiers pas, installations, ressources vidéo par semaine. |
+| [`09_ATELIERS_GUIDES/`](09_ATELIERS_GUIDES/) | Sept ateliers à compléter directement en .txt/.py avec corrigés expliqués. |
 | [`01_COURS/`](01_COURS/) | Neuf modules, de M00 à M08, répartis sur 18 semaines. |
 | [`02_FICHES/`](02_FICHES/) | Installation, dépannage, lexique et mémos. |
 | [`03_EXERCICES/`](03_EXERCICES/) | Enoncés gradués, ateliers et bilans. |

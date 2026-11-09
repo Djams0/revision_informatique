@@ -23,7 +23,7 @@
 4. Clique sur **Exécuter** (souvent F5) et constate : **Bonjour, je programme !**
 5. Rouvre le fichier et exécute-le de nouveau.
 
-**Vidéo d'installation FR (2025) :** https://www.youtube.com/watch?v=5Z3Gf5SrD1I (TechPost, « Installation de Thonny - Python »). Les boutons peuvent différer de l'édition actuelle : le site officiel fait foi. La vidéo ne dispense pas de vérifier le résultat par toi-même.
+**Vidéo d'installation FR (2020) :** https://www.youtube.com/watch?v=U9_z6qHYsa8 (Sébastien CLAUDIN, « Installation de Thonny - Python »). Les boutons peuvent différer de l'édition actuelle : le site officiel fait foi. La vidéo ne dispense pas de vérifier le résultat par toi-même.
 
 **Si ça bloque :** [fiche dépannage](../02_FICHES/INSTALLATION_ET_DEPANNAGE.md). Aucun script inconnu ni désactivation d'antivirus.
 
@@ -34,6 +34,6 @@
 **Aucun serveur à installer.** Thonny suffit : suivre [la fiche SQL](../02_FICHES/PRATIQUER_SQL_PAS_A_PAS.md) et utiliser la base temporaire de l'atelier.
 
 ## Semaine 16 : Git seulement maintenant
-Télécharger depuis https://git-scm.com/install ; vérifier dans un nouveau terminal **git --version**. **Vidéo installation Windows FR (2024)** : https://www.youtube.com/watch?v=-edL_8D_9Go ; **formation Git en français** : https://grafikart.fr/formations/git (introduction, installation, premiers commits uniquement). Les anciennes captures des vidéos peuvent ne pas correspondre à la version actuelle.
+Télécharger depuis https://git-scm.com/install ; vérifier dans un nouveau terminal **git --version**. **Vidéo installation Windows FR (2024)** : https://www.youtube.com/watch?v=72nOpz8dCHo ; **formation Git en français** : https://grafikart.fr/formations/git (introduction, installation, premiers commits uniquement). Les anciennes captures des vidéos peuvent ne pas correspondre à la version actuelle.
 
 **GitHub est facultatif ; un dépôt Git local suffit.** Ne colle jamais de mot de passe ou de clé dans un exercice ou une IA.
