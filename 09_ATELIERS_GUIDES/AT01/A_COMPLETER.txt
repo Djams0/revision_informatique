@@ -1,0 +1,11 @@
+ALGORITHME calculer_total
+  [COMPLETER] prix
+  [COMPLETER] quantite
+  total [COMPLETER] prix [COMPLETER] quantite
+  [COMPLETER] total
+FIN ALGORITHME
+
+Mes prédictions :
+(3,4) -> ...
+(0,7) -> ...
+(5,1) -> ...

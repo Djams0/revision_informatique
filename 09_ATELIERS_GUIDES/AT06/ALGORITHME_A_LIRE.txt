@@ -1,0 +1,6 @@
+FONCTION double(nombre)
+  RETOURNER nombre * 2
+FIN FONCTION
+LIRE valeur
+resultat ← double(valeur)
+AFFICHER resultat

@@ -1,0 +1,10 @@
+LIRE age
+SI [COMPLETER] ALORS
+  AFFICHER "Âge invalide"
+SINON SI [COMPLETER] ALORS
+  AFFICHER "Autorisé"
+SINON
+  AFFICHER "[COMPLETER]"
+FIN SI
+
+Tests : -1 -> ... ; 17 -> ... ; 18 -> ... ; 25 -> ...
