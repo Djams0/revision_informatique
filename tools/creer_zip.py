@@ -9,7 +9,14 @@ DEST=ROOT.parent/'FORMATION_INFORMATIQUE_DEBUTANTE_18_SEMAINES_CORRIGEE.zip'
 MANIFEST=ROOT/'08_CONTROLES/MANIFESTE_FINAL.csv'
 with MANIFEST.open(encoding='utf-8-sig',newline='') as stream:
     rows=list(csv.DictReader(stream))
-files=sorted(p for p in ROOT.rglob('*') if p.is_file() and '__pycache__' not in p.parts)
+def partageable(path):
+    """Exclut les métadonnées Git, caches et environnements locaux."""
+    rel = path.relative_to(ROOT)
+    exclus = {'.git', '__pycache__', '.pytest_cache', '.mypy_cache',
+              '.ruff_cache', '.venv', 'venv', 'node_modules'}
+    return not any(part in exclus for part in rel.parts) and path.name not in {'.DS_Store', 'Thumbs.db'}
+
+files=sorted(p for p in ROOT.rglob('*') if p.is_file() and partageable(p))
 listed={row['fichier'] for row in rows}
 actual={p.relative_to(ROOT).as_posix() for p in files}
 assert listed==actual-{'08_CONTROLES/MANIFESTE_FINAL.csv'}

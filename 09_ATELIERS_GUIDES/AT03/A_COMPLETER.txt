@@ -1,0 +1,11 @@
+LIRE n
+SI n < 0 ALORS
+  AFFICHER "Invalide"
+SINON
+  total ← [COMPLETER]
+  POUR i DE [COMPLETER] A [COMPLETER] FAIRE
+    total ← [COMPLETER]
+  FIN POUR
+  AFFICHER total
+FIN SI
+Trace n=3 : i=1 -> ... ; i=2 -> ... ; i=3 -> ...

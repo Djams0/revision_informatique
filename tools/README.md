@@ -14,3 +14,5 @@ Sur Windows, si `python` n'existe pas, essayer `py` ; dans Thonny, ouvrir le scr
 `atelier_sql.py` sert à l'apprenante en semaine 15, avec [la fiche pas à pas](../02_FICHES/PRATIQUER_SQL_PAS_A_PAS.md). Les tests automatiques exécutent les cinq scripts SQL dans SQLite en mémoire. Le manifeste donne **une ligne par autre fichier** : il s'exclut lui-même pour éviter qu'une taille auto-référente change à chaque écriture. Ses colonnes `PRESENT` indiquent l'existence, la taille et l'empreinte SHA-256, pas une garantie de qualité pédagogique ou de rendu visuel.
 
 Le contrôle structurel HTML et la validité XML des SVG ne remplacent pas une inspection visuelle dans le navigateur. La lecture complète des vidéos et l'audit des archives originales ne sont pas reproduits par ces scripts.
+
+**Complément :** les commandes de génération ignorent `.git`, les caches et les environnements virtuels locaux. Les 7 ateliers dirigés s'ajoutent aux 58 exercices ; leurs 3 corrigés Python exécutables sont contrôlés par le validateur.
