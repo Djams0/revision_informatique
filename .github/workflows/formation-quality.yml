@@ -1,0 +1,25 @@
+name: Formation quality
+on:
+  push:
+    branches: [main, formation-ateliers-guides]
+  pull_request:
+    branches: [main]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check Git
+        run: git --version
+      - name: Rebuild documentation and manifest
+        run: |
+          python tools/construire_guide.py
+          python tools/generer_manifeste.py
+          git diff --exit-code -- GUIDE_COMPLET.md 08_CONTROLES/MANIFESTE_FINAL.csv
+      - name: Test course examples and solutions
+        run: python tools/valider_formation.py
+      - name: Verify ZIP contents
+        run: python tools/creer_zip.py

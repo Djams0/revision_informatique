@@ -20,6 +20,13 @@ import xml.etree.ElementTree as ET
 from urllib.parse import unquote
 
 root = Path(__file__).resolve().parents[1]
+ROOT = root
+def partageable(path):
+    """Exclut les métadonnées Git, caches et environnements locaux."""
+    rel = path.relative_to(ROOT)
+    exclus = {'.git', '__pycache__', '.pytest_cache', '.mypy_cache',
+              '.ruff_cache', '.venv', 'venv', 'node_modules'}
+    return not any(part in exclus for part in rel.parts) and path.name not in {'.DS_Store', 'Thumbs.db'}
 errors = []
 results = {}
 def check(label, condition, detail=''):
@@ -218,7 +225,7 @@ check('liens_markdown',not any(x.startswith('Lien Markdown') for x in errors),
       f'{len(md_files)} fichiers Markdown, liens relatifs existants')
 
 forbidden={'.ovpn','.lnk','.pyc','.pem','.key','.pfx','.p12','.woff','.woff2','.ttf','.otf','.zip'}
-bad=[str(p.relative_to(root)) for p in root.rglob('*') if p.is_file() and (p.suffix.lower() in forbidden or '__pycache__' in p.parts)]
+bad=[str(p.relative_to(root)) for p in root.rglob('*') if p.is_file() and partageable(p) and p.suffix.lower() in forbidden]
 check('fichiers_interdits',not bad,str(bad[:5]))
 resource=(root/'07_RESSOURCES/SITES_ET_VIDEOS_VERIFIES.md').read_text()
 link_rows=[x for x in resource.splitlines() if x.startswith('| ') and x.split('|')[1].strip() not in ('Priorité','---')]
@@ -231,7 +238,7 @@ manifest=root/'08_CONTROLES/MANIFESTE_FINAL.csv'
 with manifest.open(encoding='utf-8-sig',newline='') as stream:
     manifest_rows=list(csv.DictReader(stream))
 actual={p.relative_to(root).as_posix():p.stat().st_size for p in root.rglob('*')
-        if p.is_file() and p != manifest and '__pycache__' not in p.parts}
+        if p.is_file() and p != manifest and partageable(p)}
 listed={row['fichier']:int(row['taille_octets']) for row in manifest_rows}
 hashes=all(hashlib.sha256((root/row['fichier']).read_bytes()).hexdigest()==row['sha256']
            for row in manifest_rows if row['fichier'] in actual)
@@ -247,7 +254,7 @@ try:
             errors.append(f'Schéma sans titre ou description : {diagram.name}')
 except ET.ParseError as exc:
     errors.append(f'Schéma XML : {exc}')
-check('schemas',len(schematic)==6 and not any(x.startswith('Schéma ') for x in errors),
+check('schemas',len(schematic)==7 and not any(x.startswith('Schéma ') for x in errors),
       '6 SVG XML avec titre et description')
 
 for name in sql_expected:
@@ -300,6 +307,34 @@ for p in root.rglob('*'):
             if not email.endswith('@example.invalid'):
                 emails.append((p.relative_to(root).as_posix(),email))
 check('emails_personnels',not emails,f'{len(emails)} adresses non fictives')
+
+# Contrôles propres aux ateliers guidés.
+atelier = root / '09_ATELIERS_GUIDES'
+demandes = ['00_DEMARRER/README.md', '00_DEMARRER/INSTALLATIONS.md',
+            '00_DEMARRER/VIDEOS_PAR_SEMAINE.md', '09_ATELIERS_GUIDES/README.md',
+            '02_FICHES/SCHEMAS/pseudo_python_allers_retours.svg']
+for n in range(1, 8):
+    code=f'AT{n:02d}'
+    demandes.extend([f'09_ATELIERS_GUIDES/{code}/CONSIGNE.md',
+                     f'09_ATELIERS_GUIDES/CORRIGES/{code}.md'])
+check('guides_debutants', all((root / p).is_file() for p in demandes),
+      f'{len(demandes)} fichiers de démarrage et ateliers')
+check('ateliers_fichiers_a_remplir', all(
+    any((atelier/f'AT{n:02d}').glob('A_COMPLETER.*')) or
+    (atelier/f'AT{n:02d}/CODE_A_CORRIGER.py').is_file()
+    for n in range(1,8)), 'Sept fichiers de travail présents')
+for n, saisie, resultat in [(4, '8\n10\n', '2'), (6, '4\n', '8'), (7, '', '2')]:
+    p=atelier/f'CORRIGES/AT{n:02d}.py'
+    if p.is_file():
+        rr=subprocess.run([sys.executable,str(p)],input=saisie,text=True,
+                          capture_output=True,timeout=5)
+        bon=rr.returncode==0 and resultat in rr.stdout
+    else:
+        bon=False
+    check(f'atelier_solution_AT{n:02d}',bon, 'Sortie Python comparée à la consigne')
+check('exclusion_git', not any('.git' in p.relative_to(root).parts
+      for p in root.rglob('*') if p.is_file() and partageable(p)),
+      'Aucune métadonnée Git ne doit être distribuée')
 
 print(json.dumps({'results':results,'errors':errors,
                   'manual':{'rendu_visuel':'NON_TESTÉ','lecture_integrale_videos':'NON_TESTÉ',

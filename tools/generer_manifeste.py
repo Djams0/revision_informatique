@@ -17,8 +17,14 @@ ROLES = {
     "08_CONTROLES": "contrôle documenté",
     "tools": "outil reproductible",
 }
-files=sorted(p for p in ROOT.rglob('*') if p.is_file() and p != DEST and
-             '__pycache__' not in p.parts)
+def partageable(path):
+    """Exclut les métadonnées Git, caches et environnements locaux."""
+    rel = path.relative_to(ROOT)
+    exclus = {'.git', '__pycache__', '.pytest_cache', '.mypy_cache',
+              '.ruff_cache', '.venv', 'venv', 'node_modules'}
+    return not any(part in exclus for part in rel.parts) and path.name not in {'.DS_Store', 'Thumbs.db'}
+
+files=sorted(p for p in ROOT.rglob('*') if p.is_file() and p != DEST and partageable(p))
 with DEST.open('w',encoding='utf-8',newline='') as stream:
     writer=csv.writer(stream,lineterminator='\n')
     writer.writerow(['fichier','role','taille_octets','sha256','etat'])
