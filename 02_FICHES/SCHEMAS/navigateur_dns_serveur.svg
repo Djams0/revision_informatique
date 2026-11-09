@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="350" viewBox="0 0 880 350" role="img">
+<title>Visiter une page Web</title><desc>Le navigateur consulte le DNS pour trouver une adresse, puis demande une page au serveur qui répond.</desc>
+<defs><marker id="p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#195980"/></marker></defs>
+<rect width="880" height="350" fill="#ffffff"/>
+<text x="32" y="42" font-family="Arial,sans-serif" font-size="23" font-weight="bold" fill="#17324b">Visiter une page Web</text>
+<path d="M 265 175 L 340 130" fill="none" stroke="#195980" stroke-width="3" marker-end="url(#p)"/>
+<text x="302" y="140" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#17324b">nom</text>
+<path d="M 345 150 L 265 220" fill="none" stroke="#195980" stroke-width="3" marker-end="url(#p)"/>
+<text x="305" y="173" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#17324b">adresse</text>
+<path d="M 270 215 L 610 215" fill="none" stroke="#195980" stroke-width="3" marker-end="url(#p)"/>
+<text x="440" y="203" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#17324b">demande HTTPS</text>
+<path d="M 615 255 L 265 255" fill="none" stroke="#195980" stroke-width="3" marker-end="url(#p)"/>
+<text x="440" y="243" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#17324b">réponse</text>
+<rect x="45" y="165" width="220" height="75" rx="12" fill="#eaf3f7" stroke="#195980" stroke-width="2"/>
+<text x="155" y="189" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#17324b">Navigateur</text>
+<text x="155" y="215" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#17324b">client</text>
+<rect x="345" y="70" width="180" height="90" rx="12" fill="#eaf3f7" stroke="#195980" stroke-width="2"/>
+<text x="435" y="102" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#17324b">DNS</text>
+<text x="435" y="128" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#17324b">donne l’adresse</text>
+<rect x="615" y="165" width="220" height="75" rx="12" fill="#eaf3f7" stroke="#195980" stroke-width="2"/>
+<text x="725" y="189" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#17324b">Serveur Web</text>
+<text x="725" y="215" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#17324b">renvoie la page</text>
+<text x="32" y="325" font-family="Arial,sans-serif" font-size="16" fill="#17324b">Le DNS aide à trouver le serveur ; il ne fournit pas la page elle-même.</text></svg>

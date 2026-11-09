@@ -9,11 +9,11 @@
 8;M03;"Types/conversions, conditions Python, indentation, comparaisons et booléens ; traduire S4–S5.";`monnaie.py` et `age.py`.;3–5 h;☐;☐;☐;☐;;;;
 9;M03;"Boucles Python `for`, `range`, `while`, saisie contrôlée ; traduire S6.";`table.py` et `note.py`.;3–5 h;☐;☐;☐;☐;;;;
 10;M03;Listes, chaînes, dictionnaires élémentaires et parcours.;Petit catalogue de livres fictifs en mémoire.;3–5 h;☐;☐;☐;☐;;;;
-11;M03;"Fonctions simples, paramètres/retour, portée locale intuitive ; tests normaux et limites.";Mini-projet 1 : moyenne de notes fictives, entrées testées.;3–5 h;☐;☐;☐;☐;;;;
-12;M04;"Fichiers texte et CSV simples, chemins relatifs, `with open`, encodage UTF-8, `try/except ValueError` ciblé ; débogage.";Mini-projet 2 : carnet local de dépenses fictives et fichier de test.;3–5 h;☐;☐;☐;☐;;;;
+11;M03;"Fonctions simples, paramètres/retour, portée locale intuitive ; tests normaux et limites.";P1 : mini-calculatrice (3 opérations, entrée invalide). Variante facultative : moyenne de notes fictives.;3–5 h;☐;☐;☐;☐;;;;
+12;M04;"Fichiers texte et CSV simples, chemins relatifs, `with open`, encodage UTF-8, `try/except ValueError` ciblé ; débogage.";P22–P25 et début de P3 : liste de tâches locale et persistance. Variante facultative : carnet de dépenses fictives.;3–5 h;☐;☐;☐;☐;;;;
 13;M05;"Page Web locale : HTML, balises sémantiques, titres, listes, liens, images avec `alt` ; éditeur simple.";`index.html` sur un sujet inventé.;3–5 h;☐;☐;☐;☐;;;;
 14;M05;"CSS séparé, sélecteurs élémentaires, couleurs, espacements, lisibilité, mise en page simple ; inspection navigateur.";`style.css` et page locale améliorée.;3–5 h;☐;☐;☐;☐;;;;
-15;M06;"Données tabulaires, table/ligne/colonne, clé primaire, relation intuitive ; SQLite local : `CREATE`, `INSERT`, `SELECT`, `WHERE`, `ORDER BY`, `UPDATE`.";Mini-base de livres fictifs et requêtes documentées.;3–5 h;☐;☐;☐;☐;;;;
+15;M06;"Données tabulaires, table/ligne/colonne, clé primaire, relation intuitive ; SQLite local : `CREATE`, `INSERT`, `SELECT`, `WHERE`, `ORDER BY`, `UPDATE`.";Q01–Q05 : base de livres fictifs en mémoire avec la fiche SQL pas à pas.;3–5 h;☐;☐;☐;☐;;;;
 16;M07;"Terminal sans danger : dossier courant, `pwd`/`cd`/liste, chemins ; Git local `init/status/add/commit`, puis GitHub en option.";Dossier de projet versionné localement, 2 commits.;3–5 h;☐;☐;☐;☐;;;;
 17;M08;"Projet final, cadrage : choisir carnet, quiz ou gestion de livres ; spécifier entrées/sorties, pseudo-code, tests, fichiers et README.";Plan d'une page, prototype Python local et 5 cas de test.;3–5 h;☐;☐;☐;☐;;;;
 18;M08;Finalisation, correction, présentation, autonomie : lire une documentation, chercher une erreur, découper une amélioration.;Projet Python fonctionnel, données fictives, README, journal de progrès.;3–5 h;☐;☐;☐;☐;;;;

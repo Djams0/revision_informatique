@@ -1,32 +1,28 @@
-# Résultats des contrôles — 8 novembre 2026
+# Résultats des contrôles reproductibles — 8 novembre 2026
 
-Les contrôles portent **uniquement sur les fichiers réécrits du dossier final**. Aucun script d'archive d'origine n'a été lancé. Environnement : Python 3.12, module standard `sqlite3`, Git local et analyseur HTML standard de Python. Le programme de contrôle `final_quality.py` reste hors du dossier destiné à l'apprenante ; ses résultats sont résumés ici. Les programmes écrivant un fichier ont été lancés dans des copies temporaires.
+Commande lancée depuis la racine du dépôt : `python tools/valider_formation.py`, après `python tools/construire_guide.py` et `python tools/generer_manifeste.py`. Environnement observé : Python 3.12.14, SQLite du module standard `sqlite3` et Git 2.52.0. Les sorties détaillées sont produites en JSON sur la console ; le script quitte avec code 1 si au moins un contrôle échoue.
 
-| Contrôle | Méthode et preuve observable | Résultat |
+**Bilan de cette passe : 44 contrôles `VALIDÉ`, 0 `ÉCHEC`.** Les catégories ci-dessous résument les contrôles réellement exécutés. Le résultat est reproductible **sur les fichiers actuellement dans ce dépôt**, sans les archives d'origine.
+
+| Contrôle exécuté | Preuve observable | État |
 |---|---|---|
-| Structure | Vérification de 26 fichiers principaux non vides ; 9 modules M00–M08, cinq fiches, programme et suivi. | **VALIDE** |
-| Sources | Lecture CSV de `00_ADMIN/INVENTAIRE_SOURCES.csv` : 365 entrées, 10 noms d'archives, empreintes et doublons renseignés. | **VALIDE** |
-| Progression | Lecture du calendrier : 18 lignes S1–S18 ; chacun des neuf modules contient objectif, explication, exemple, essai et vérification. | **VALIDE** |
-| Lexique | 80 lignes numérotées distinctes dans `02_FICHES/LEXIQUE_FR_EN.md`. | **VALIDE** |
-| Énoncés et corrigés | Extraction des identifiants `## A/P/W/Q/Tnn —` : 58 uniques dans les énoncés, mêmes 58 une fois chacun dans les corrigés ; 15 A, 25 P, 8 W, 5 Q, 5 T. Aucune solution de référence dans les énoncés. | **VALIDE** |
-| Jalons | J03, J06, J12 et J18 présents dans `QUIZ_ET_BILANS.md` et `CORRIGES_QUIZ.md`. | **VALIDE** |
-| Python de `05_CODE_EXEMPLES` | Compilation en mémoire de 30 fichiers ; exécution des 30 copies avec entrées de test et sortie attendue ; P23 exécuté deux fois et deux lignes conservées. | **VALIDE** |
-| Code des cours | Extraction et exécution isolée des 11 blocs Python de M03, M04, M06 et M08 ; contrôle de la sortie de chacun. Variante CSV `"abc"` : `ValueError` attendu. | **VALIDE** |
-| Projets | P1–P4 ont énoncé, indices, critères et solution distincte ; neuf scénarios pour P1–P3 : opérations, erreurs, score, texte vide et persistance au deuxième lancement. | **VALIDE** |
-| SQL | `sqlite3.connect(':memory:')`, exécution des cinq `.sql` et comparaison exacte des résultats `SELECT` avec les jeux de référence. | **VALIDE** |
-| Git | `git init`, identité fictive locale, deux `git add`/`git commit`, `git log --oneline` : deux lignes. | **VALIDE** |
-| HTML/CSS | Analyse des neuf pages locales : doctype, `lang=fr`, ancres `#id`, images avec `alt`, liens relatifs vers CSS/SVG existants. P4 lié à son CSS local. | **VALIDE** pour la structure |
-| Liens internes Markdown | Analyse des destinations locales de tous les `.md`, avec `INDEX.md` et `GUIDE_COMPLET.md` ; toutes les destinations existent. | **VALIDE** |
-| Ressources Web | Ouverture des 12 pages de référence et des quatre pages officielles CS50 ; contrôle dans le navigateur du lecteur intégré pour Scratch, Python, HTML/CSS et SQL. Titres et sujets revus le 8 novembre 2026. | **VALIDE** pour les pages et les lecteurs intégrés |
-| Nettoyage | Aucun fichier source brut, archive ZIP d'origine, `.ovpn`, `.lnk`, clé, certificat, cache ou `.pyc` dans le paquet. Le CSV d'inventaire et les renvois ont des chemins anonymisés. | **VALIDE** |
-| ZIP final | Ouverture avec `zipfile.ZipFile`, `testzip()`, présence de la racine et concordance de tous les fichiers du manifeste. | **VALIDE** après contrôle de l'archive finale |
+| Inventaire et structure | 365 entrées de 10 archives dans le CSV historique ; 18 lignes de calendrier ; 9 modules et 33 fichiers de référence présents. Les archives brutes ne sont pas relues. | **VALIDÉ** pour les documents présents |
+| Exercices et corrigés | 58 identifiants uniques A15, P25, W8, Q5, T5 ; même ensemble une fois dans les corrigés ; 4 jalons J03/J06/J12/J18. Les 4 options OA01/OA02/OW01/OW02 restent distinctes et corrigées. | **VALIDÉ** |
+| Semaines 11–12 et guide | Suivi à 18 lignes, P1 en S11, P3 en S12, variantes nommées facultatives ; les 9 cours figurent dans le guide avec liens adaptés. | **VALIDÉ** |
+| Programmes Python | 30 solutions copiées dans des dossiers temporaires, exécutées avec saisies et sorties attendues ; 11 blocs des cours exécutés ; fichier P23 relu après deux lancements ; variante CSV `abc` : `ValueError` attendu. | **VALIDÉ** |
+| Projets | 4 dossiers avec énoncé, indices, critères et solution ; 9 scénarios console exécutés pour P1–P3. P4 est contrôlé statiquement parmi les pages HTML. | **VALIDÉ** pour ces contrôles |
+| SQL et guide débutant | Résultats exacts des 5 `.sql` dans SQLite en mémoire ; chacun relancé par `tools/atelier_sql.py`. `DROP TABLE` refusé par cet atelier. | **VALIDÉ** |
+| Git local | Deux commits fictifs dans un dépôt temporaire ; deux lignes de journal. | **VALIDÉ** |
+| Navigation et graphismes | Liens locaux de 64 Markdown résolus ; 9 pages HTML : doctype, `lang`, liens et `alt` contrôlés statiquement ; 6 SVG XML ont un titre et une description. Les SVG ont été convertis en PNG et inspectés en planche ; le schéma DNS a été corrigé après cette inspection. | **VALIDÉ** pour ces contrôles |
+| Manifeste et nettoyage | 129 autres fichiers, tous listés avec chemin, taille et SHA-256 concordants ; aucun `.zip`, `.ovpn`, `.lnk`, clé ou cache interdit dans le dépôt. Recherche d'adresses : seulement `apprenante@example.invalid`, aucune adresse non fictive. | **VALIDÉ** après régénération finale du manifeste |
 
-## Limites observées et contrôle alternatif
+## Limites séparées des validations
 
-- **NON_TESTE — rendu visuel des fichiers locaux :** le lancement automatisé de Chromium s'arrête sur `socket() failed: Operation not permitted` ; le navigateur graphique de cet environnement bloque aussi l'ouverture des URL `file://` par sa politique d'organisation. Les neuf HTML, chemins CSS/SVG et ancres ont été inspectés statiquement. Sur son propre ordinateur, l'apprenante peut double-cliquer sur `05_CODE_EXEMPLES/web/W08/index.html` et `06_PROJETS/P4_PORTFOLIO_LOCAL/SOLUTION/index.html`, vérifier les styles et réduire la fenêtre à environ 375 px ; `CRITERES.md` du projet P4 décrit trois contrôles visibles. Aucun résultat de capture d'écran du site n'est revendiqué.
-- **NON_TESTE — lecture audio/vidéo intégrale :** les quatre pages de cours CS50 et leurs lecteurs intégrés ont été observés dans un navigateur ; les lecteurs directs ont répondu de façon intermittente au contrôle automatique (un sur quatre a répondu à la dernière ouverture). Les sous-titres, la durée totale et la lecture complète dépendent du navigateur. Le fichier `07_RESSOURCES/SITES_ET_VIDEOS_VERIFIES.md` privilégie donc les pages officielles accessibles et indique cette limite. Les vidéos ne sont pas nécessaires pour réussir le parcours.
-- La disponibilité des ressources externes et leurs conditions d'accès peuvent changer après le 8 novembre 2026. Les exercices, fichiers de code et projets de base fonctionnent localement.
+| Point | État | Contrôle manuel restant |
+|---|---|---|
+| Mise en page des neuf pages HTML locales sur divers écrans | **NON_TESTÉ** | Ouvrir `05_CODE_EXEMPLES/web/W08/index.html` et la solution de P4 dans un navigateur, vérifier les styles et une fenêtre étroite. Les vérifications statiques ne prouvent pas le rendu. |
+| Parcours SQL dans l'interface graphique Thonny sur Windows, macOS et Linux | **NON_TESTÉ** | Ouvrir la fiche, créer `mes_exercices/S15/essai.sql`, utiliser F5 et comparer avec Q01. Le même script a été exécuté en ligne de commande sur les cinq solutions. |
+| Vidéos externes et disponibilité future des liens | **NON_TESTÉ** à cette passe | Ouvrir les pages officielles sur la machine de l'apprenante ; aucun titre, durée ni lecture complète supplémentaire n'est revendiqué ici. |
+| Audit direct des 10 archives originales | **NON_TESTÉ** à cette passe | Archives non accessibles lors des correctifs ; le CSV et les rapports d'audit antérieurs restent la traçabilité disponible. |
 
-## Reproduction rapide
-
-Depuis un terminal équipé de Python 3, la commande `python final_quality.py` a été exécutée avant l'emballage depuis l'espace de contrôle ; elle ne fait pas partie des cours. Sans ce script : ouvrir les exemples dans Thonny, exécuter chaque `.sql` dans une base SQLite **vide**, ouvrir les `.html` en local et vérifier les résultats attendus écrits dans les énoncés et critères. Le manifeste `MANIFESTE_FINAL.csv` donne la liste exhaustive des fichiers partageables et leur taille.
+Le manifeste s'exclut lui-même pour éviter une taille et une empreinte auto-référentes ; son nombre de lignes équivaut au nombre total de fichiers **moins un**. Si un fichier du dépôt est édité, régénérer le guide si nécessaire, puis le manifeste avant de relancer les contrôles.
